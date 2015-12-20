@@ -1,6 +1,6 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
+output:
   html_document:
     keep_md: true
 ---
@@ -8,7 +8,13 @@ output:
 
 ## Loading and preprocessing the data
 
-
+```{r}
+if (!file.exists("activity.csv")) {
+  unzip("activity.zip")  
+}
+data = read.csv("activity.csv")
+print(head(data))
+```
 
 ## What is mean total number of steps taken per day?
 
@@ -18,7 +24,7 @@ output:
 
 
 
-## Imputing missing values
+## Inputing missing values
 
 
 
